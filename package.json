@@ -2,16 +2,16 @@
   "name": "<github-action>",
   "version": "1.0.0",
   "description": "A GitHub Actions template repository for JavaScript based Actions",
-  "author": "<author>",
+  "author": "RageAgainstThePixel",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/<author>/<github-action>.git"
+    "url": "git+https://github.com/RageAgainstThePixel/<github-action>.git"
   },
   "bugs": {
-    "url": "https://github.com/<author>/<github-action>/issues"
+    "url": "https://github.com/RageAgainstThePixel/<github-action>/issues"
   },
-  "homepage": "https://github.com/<author>/<github-action>",
+  "homepage": "https://github.com/RageAgainstThePixel/<github-action>",
   "main": "dist/index.js",
   "keywords": [],
   "dependencies": {
