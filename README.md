@@ -1,6 +1,6 @@
-# github-action-js-template
+# github-action-template
 
-A GitHub Actions template repository for JavaScript based Actions
+A GitHub Actions template repository for TypeScript based Actions.
 
 ## How to use
 

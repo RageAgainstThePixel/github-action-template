@@ -1,4 +1,4 @@
-name: <github-action>
+name: github-action-template
 description: 'A GitHub Actions template repository for JavaScript based Actions'
 # inputs:
 # outputs:
