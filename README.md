@@ -8,7 +8,7 @@ A GitHub Actions template repository for TypeScript based Actions.
 
 ```yaml
 steps:
-  - uses: RageAgainstThePixel/<github-action>@v1
+  - uses: RageAgainstThePixel/github-action-template@v1
 ```
 
 ### inputs
