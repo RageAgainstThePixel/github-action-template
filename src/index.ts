@@ -1,4 +1,4 @@
-import core from '@actions/core';
+import core = require('@actions/core');
 
 const IS_POST = !!core.getState('isPost');
 
