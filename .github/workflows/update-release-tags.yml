@@ -1,0 +1,26 @@
+name: Update release tags
+# Only run when new semver tag is pushed
+on:
+  push:
+    tags:
+      # If prepend-v is false, switch to '[0-9]+.[0-9]+.[0-9]+' (including the quotes!)
+      - v[0-9]+.[0-9]+.[0-9]+
+      # To trigger on pre-releases (requires update-minor to be true), also add
+      # this line, or '[0-9]+.[0-9]+.[0-9]+-*' (with quotes) if prepend-v is false
+      - v[0-9]+.[0-9]+.[0-9]+-*
+jobs:
+  update-release-tags:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: bewuethr/release-tracker-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          update-latest: true
+          update-minor: true
+          prepend-v: true
