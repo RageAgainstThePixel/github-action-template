@@ -1,12 +1,9 @@
 name: validate
 on:
   push:
-    branches:
-      - 'main'
+    branches: ['main']
   pull_request:
-    branches:
-      - '*'
-  # Allows you to run this workflow manually from the Actions tab
+    branches: ['*']
   workflow_dispatch:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -14,6 +11,8 @@ concurrency:
 jobs:
   validate:
     runs-on: ${{ matrix.os }}
+    permissions:
+      contents: read
     strategy:
       fail-fast: false
       matrix:
