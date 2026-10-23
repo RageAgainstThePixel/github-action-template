@@ -1,4 +1,4 @@
-import core = require('@actions/core');
+import * as core from '@actions/core';
 
 const IS_POST = !!core.getState('isPost');
 
@@ -11,7 +11,7 @@ const main = async () => {
             core.info('Hello World! (post)');
         }
     } catch (error) {
-        core.setFailed(error);
+        core.setFailed(error instanceof Error ? error : String(error));
     }
 }
 
