@@ -18,3 +18,14 @@ steps:
 | .... | ........... | ........ |
 
 ### outputs
+
+## Development
+
+Requires Node.js 24.
+
+```bash
+npm run build      # clean install + bundle to dist/
+npm run typecheck  # tsc --noEmit
+```
+
+Commit the rebuilt `dist/` with your changes.

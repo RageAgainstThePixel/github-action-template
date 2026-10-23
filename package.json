@@ -1,6 +1,6 @@
 {
   "name": "github-action-template",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A GitHub Actions template repository for TypeScript based Actions.",
   "author": "RageAgainstThePixel",
   "license": "MIT",
@@ -13,19 +13,23 @@
   },
   "homepage": "https://github.com/RageAgainstThePixel/github-action-template",
   "main": "dist/index.js",
+  "engines": {
+    "node": ">=24"
+  },
   "keywords": [],
   "dependencies": {
-    "@actions/core": "^1.10.1"
+    "@actions/core": "^3.0.1"
   },
   "devDependencies": {
-    "@types/node": "^22.2.0",
-    "@vercel/ncc": "^0.34.0",
-    "shx": "^0.3.4",
-    "typescript": "^5.5.4"
+    "@types/node": "^24.12.2",
+    "esbuild": "^0.28.2",
+    "shx": "^0.4.0",
+    "typescript": "^7.0.2"
   },
   "scripts": {
     "build": "npm run clean && npm run bundle",
-    "bundle": "ncc build src/index.ts -o dist --source-map --license licenses.txt",
-    "clean": "npm install && shx rm -rf dist/ out/ node_modules/ && npm ci"
+    "bundle": "esbuild src/index.ts --bundle --platform=node --target=node24 --format=cjs --outfile=dist/index.js --sourcemap --log-level=warning",
+    "clean": "npm install && shx rm -rf dist/ out/ node_modules/ && npm ci",
+    "typecheck": "tsc --noEmit"
   }
 }

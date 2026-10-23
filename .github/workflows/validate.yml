@@ -19,4 +19,5 @@ jobs:
         os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
       - uses: actions/checkout@v6
-      - run: echo "hello world"
+      - uses: ./
+        name: RageAgainstThePixel/github-action-template

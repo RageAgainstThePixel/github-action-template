@@ -3,6 +3,6 @@ description: 'A GitHub Actions template repository for TypeScript based Actions'
 # inputs:
 # outputs:
 runs:
-  using: 'node20'
+  using: 'node24'
   main: 'dist/index.js'
-  #post: 'dist/index.js'
+  post: 'dist/index.js'
