@@ -10,3 +10,4 @@ jobs:
     uses: RageAgainstThePixel/workflows/.github/workflows/configure-action-repo.yml@main
     secrets:
       token: ${{ secrets.CI_TOKEN }}
+      discord-webhook: ${{ secrets.ACTIONS_DISCORD_WEBHOOK }}
